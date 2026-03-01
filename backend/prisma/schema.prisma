@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db" // ¡De vuelta a la normalidad!
+}
+
+// --- TABLAS DE PLANES ---
+
+model Plan {
+  id          Int         @id @default(autoincrement())
+  nombre      String
+  precio      String
+  destacado   Boolean     @default(false)
+  beneficios  Beneficio[] 
+}
+
+model Beneficio {
+  id          Int      @id @default(autoincrement())
+  texto       String
+  activo      Boolean  @default(true)
+  planId      Int
+  plan        Plan     @relation(fields: [planId], references: [id], onDelete: Cascade)
+}
+
+// --- TABLAS DE DISCIPLINAS ---
+
+model Disciplina {
+  id          Int               @id @default(autoincrement())
+  etiqueta    String
+  titulo      String
+  descripcion String
+  // Ahora se relaciona con la nueva tabla
+  items       ItemDisciplina[] 
+}
+
+model ItemDisciplina {
+  id           Int        @id @default(autoincrement())
+  texto        String
+  disciplinaId Int
+  disciplina   Disciplina @relation(fields: [disciplinaId], references: [id], onDelete: Cascade)
+}
+
+// --- TABLA DE GALERÍA ---
+
+model Galeria {
+  id          Int      @id @default(autoincrement())
+  titulo      String
+  imagen      String
+  clases      String
+}
+
+
