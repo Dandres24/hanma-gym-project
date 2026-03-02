@@ -97,11 +97,11 @@ async function main() {
 
   // 3. Insertar Galería (Se queda igual)
   await prisma.galeria.create({
-    data: { titulo: 'ZONA DE PESAS LIBRES', imagen: '/pesas.jpg', clases: 'md:col-span-2 md:row-span-2 min-h-[400px]' }
+    data: { titulo: 'ZONA DE PESAS LIBRES', imagen: 'frontend/public/pesas.jpg', clases: 'md:col-span-2 md:row-span-2 min-h-[400px]' }
   });
   
   await prisma.galeria.create({
-    data: { titulo: 'EL RING / LA CÚPULA', imagen: '/ring.jpg', clases: 'md:col-span-2 min-h-[250px]' }
+    data: { titulo: 'EL RING / LA CÚPULA', imagen: 'frontend/public/ring.jpg', clases: 'md:col-span-2 min-h-[250px]' }
   });
 
   console.log('✅ ¡Base de datos sembrada con éxito!');
