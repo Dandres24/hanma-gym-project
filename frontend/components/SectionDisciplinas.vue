@@ -1,5 +1,5 @@
 <script setup>
-const { data: disciplinas } = await useFetch('http://localhost:4000/api/disciplinas')
+const { data: disciplinas } = await useFetch('hanma-gym-project-production.up.railway.app/api/disciplinas')
 </script>
 
 <template>

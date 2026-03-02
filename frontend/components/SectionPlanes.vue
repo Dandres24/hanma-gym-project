@@ -1,7 +1,7 @@
 <script setup>
 // ¡Adiós a los datos estáticos! 
 // Nuxt irá al puerto 4000, tocará la puerta de NestJS y traerá los planes.
-const { data: planes } = await useFetch('http://localhost:4000/api/planes')
+const { data: planes } = await useFetch('hanma-gym-project-production.up.railway.app/api/planes')
 </script>
 
 

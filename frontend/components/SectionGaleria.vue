@@ -1,6 +1,6 @@
 <script setup>
 // ¡Aquí está la magia! Le pedimos las fotos al backend de NestJS
-const { data: galeria, pending } = await useFetch('http://localhost:4000/api/galeria')
+const { data: galeria, pending } = await useFetch('hanma-gym-project-production.up.railway.app/api/galeria')
 </script>
 
 <template>
