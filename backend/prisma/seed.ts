@@ -84,12 +84,12 @@ async function main() {
 
     await prisma.plan.create({
     data: {
-      nombre: 'PLAN LINAJE HANMA', precio: '$119.000', destacado: true,
+      nombre: 'PLAN LINAJE HANMA', precio: '$119.000', destacado: false,
       beneficios: {
         create: [
           { texto: 'Acceso sala de pesas libre', activo: true },
           { texto: 'Clases de boxeo / Muay Thai', activo: true },
-          { texto: 'Evaluación física quincenal', activo: true }
+          { texto: 'Evaluación física quincenal', activo: false }
         ]
       }
     }
