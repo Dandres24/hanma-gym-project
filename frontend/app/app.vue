@@ -1,10 +1,4 @@
 <script setup>
-import AppHeader from './components/AppHeader.vue'
-import AppFooter from './components/AppFooter.vue'
-import HeroSection from './components/HeroSection.vue'
-import SectionDisciplinas from './components/SectionDisciplinas.vue'
-import SectionPlanes from './components/SectionPlanes.vue'
-import SectionGaleria from './components/SectionGaleria.vue'
 
 // Aquí podríamos cargar datos dinámicamente en el futuro, pero por ahora usaremos datos estáticos para las secciones.
 </script>
@@ -18,6 +12,7 @@ import SectionGaleria from './components/SectionGaleria.vue'
     <SectionPlanes />
     <SectionGaleria />
     <AppFooter />
+
   </div>
 </template>
 
