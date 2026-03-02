@@ -5,8 +5,15 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Sembrando la base de datos de Hanma Gym (SQLite)...');
+ console.log('Limpiando la arena de combate (Base de datos)...');
 
+  // Borramos todo en este orden para evitar problemas de relación
+  await prisma.beneficio.deleteMany();
+  await prisma.plan.deleteMany();
+  await prisma.disciplina.deleteMany();
+  await prisma.galeria.deleteMany();
+
+  console.log('Sembrando los nuevos datos...');
   // 1. Insertar Disciplinas (Ahora usando relaciones)
   await prisma.disciplina.create({
     data: {
