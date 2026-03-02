@@ -14,6 +14,7 @@ async function main() {
   await prisma.galeria.deleteMany();
 
   console.log('Sembrando los nuevos datos...');
+
   // 1. Insertar Disciplinas (Ahora usando relaciones)
   await prisma.disciplina.create({
     data: {
@@ -71,6 +72,19 @@ async function main() {
   await prisma.plan.create({
     data: {
       nombre: 'PLAN CAMPEÓN', precio: '$89.000', destacado: true,
+      beneficios: {
+        create: [
+          { texto: 'Acceso sala de pesas libre', activo: true },
+          { texto: 'Clases de boxeo / Muay Thai', activo: true },
+          { texto: 'Evaluación física quincenal', activo: true }
+        ]
+      }
+    }
+  });
+
+    await prisma.plan.create({
+    data: {
+      nombre: 'PLAN LINAJE HANMA', precio: '$119.000', destacado: true,
       beneficios: {
         create: [
           { texto: 'Acceso sala de pesas libre', activo: true },
