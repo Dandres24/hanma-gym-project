@@ -18,8 +18,6 @@ import SectionGaleria from './components/SectionGaleria.vue'
     <SectionPlanes />
     <SectionGaleria />
     <AppFooter />
-    
-
   </div>
 </template>
 
