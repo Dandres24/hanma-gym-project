@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
-  // ¡Nuestra llave mágica para Vercel!
+  // ¡Nuestra llave mágica para que Vercel pueda entrar (CORS)!
   app.enableCors();
 
   // Escuchar en el puerto de Railway (o 4000) y abrir la red con '0.0.0.0'
