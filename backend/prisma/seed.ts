@@ -95,24 +95,23 @@ async function main() {
     }
   });
 
- 
-}
-// Así debería quedar la parte de tu galería en seed.ts
-   await prisma.galeria.createMany({
-  data: [
-    {
-      titulo: 'ZONA DE PESAS LIBRES',
-      imagen: '/pesas.jpg', // ¡Aquí está la magia! Solo la barrita y el nombre.
-      clases: 'md:col-span-2 md:row-span-2 min-h-[400px]'
-    },
-    {
-      titulo: 'EL RING / LA CÚPULA',
-      imagen: '/ring.jpg',
-      clases: 'md:col-span-2 min-h-[250px]'
-    }
-    // ... asegúrate de arreglar las demás fotos si tienes más
-  ]
+  // Así debería quedar la parte de tu galería en seed.ts
+  await prisma.galeria.createMany({
+    data: [
+      {
+        titulo: 'ZONA DE PESAS LIBRES',
+        imagen: '/pesas.jpg', // ¡Aquí está la magia! Solo la barrita y el nombre.
+        clases: 'md:col-span-2 md:row-span-2 min-h-[400px]'
+      },
+      {
+        titulo: 'EL RING / LA CÚPULA',
+        imagen: '/ring.jpg',
+        clases: 'md:col-span-2 min-h-[250px]'
+      }
+      // ... asegúrate de arreglar las demás fotos si tienes más
+    ]
   });
+}
 
 main()
   .catch((e) => {
