@@ -56,9 +56,12 @@ async function main() {
   });
 
   // 2. Insertar Planes (Se quedan igual)
-  await prisma.plan.create({
+ await prisma.plan.create({
     data: {
-      nombre: 'PLAN RETADOR', precio: '$69.000', destacado: false,
+      nombre: 'PLAN RETADOR', 
+      precio: '$69.000', 
+      destacado: false,
+      descripcion: 'Acceso básico a la zona de musculación y cardio. Forja tu camino inicial.',
       beneficios: {
         create: [
           { texto: 'Acceso sala de pesas libre', activo: true },
@@ -71,7 +74,10 @@ async function main() {
 
   await prisma.plan.create({
     data: {
-      nombre: 'PLAN CAMPEÓN', precio: '$89.000', destacado: true,
+      nombre: 'PLAN CAMPEÓN', 
+      precio: '$89.000', 
+      destacado: false,
+      descripcion: 'Entrenamiento intenso. Acceso a zonas especializadas y clases de combate real.',
       beneficios: {
         create: [
           { texto: 'Acceso sala de pesas libre', activo: true },
@@ -82,19 +88,22 @@ async function main() {
     }
   });
 
-    await prisma.plan.create({
+  await prisma.plan.create({
     data: {
-      nombre: 'PLAN LINAJE HANMA', precio: '$119.000', destacado: false,
+      nombre: 'PLAN LINAJE HANMA', 
+      precio: '$119.000', 
+      destacado: true,
+      descripcion: 'Poder absoluto. El plan definitivo sin restricciones para romper tus límites.',
       beneficios: {
         create: [
-          { texto: 'Acceso sala de pesas libre', activo: true },
-          { texto: 'Clases de boxeo / Muay Thai', activo: true },
-          { texto: 'Evaluación física quincenal', activo: false }
+          { texto: 'Acceso VIP a todas las instalaciones', activo: true },
+          { texto: 'Sparring y combate en "La Cúpula"', activo: true },
+          { texto: 'Asesoría nutricional y evaluación', activo: true },
+          { texto: 'Trae un invitado 5 veces al mes', activo: true }
         ]
       }
     }
   });
-
   // Así debería quedar la parte de tu galería en seed.ts
   await prisma.galeria.createMany({
     data: [

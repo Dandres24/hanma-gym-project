@@ -11,18 +11,19 @@ datasource db {
 
 model Plan {
   id          Int         @id @default(autoincrement())
-  nombre      String
+  nombre      String      // Antes lo tenías como titulo
   precio      String
+  descripcion String      // ¡Aquí está el campo que te faltaba!
   destacado   Boolean     @default(false)
-  beneficios  Beneficio[] 
+  beneficios  Beneficio[] // La relación con los beneficios
 }
 
 model Beneficio {
-  id          Int      @id @default(autoincrement())
-  texto       String
-  activo      Boolean  @default(true)
-  planId      Int
-  plan        Plan     @relation(fields: [planId], references: [id], onDelete: Cascade)
+  id       Int     @id @default(autoincrement())
+  texto    String
+  activo   Boolean @default(true) // Si es true sale el check, si es false sale tachado
+  planId   Int
+  plan     Plan    @relation(fields: [planId], references: [id], onDelete: Cascade)
 }
 
 // --- TABLAS DE DISCIPLINAS ---
