@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection.vue'
 import SectionDisciplinas from './components/SectionDisciplinas.vue'
 import SectionPlanes from './components/SectionPlanes.vue'
 import SectionGaleria from './components/SectionGaleria.vue'
+import SectionBannerCoach from './components/SectionBannerCoach.vue'
 // Aquí podríamos cargar datos dinámicamente en el futuro, pero por ahora usaremos datos estáticos para las secciones.
 </script>
 
@@ -15,6 +16,7 @@ import SectionGaleria from './components/SectionGaleria.vue'
    <HeroSection /> 
    <SectionDisciplinas />
     <SectionPlanes />
+    <SectionBannerCoach />
     <SectionGaleria />
     <AppFooter />
 
