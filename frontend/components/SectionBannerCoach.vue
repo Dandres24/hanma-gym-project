@@ -17,7 +17,7 @@
 
       <div class="md:w-1/3 flex justify-center md:justify-end">
         <a 
-          href="https://wa.me/573000000000?text=Hola%20Hanma%20Gym!%20Me%20interesa%20el%20coaching%20online." 
+          href="https://wa.me/573006643475?text=Hola%20Hanma%20Gym!%20Me%20interesa%20el%20coaching%20online." 
           target="_blank"
           class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 bg-red-600 rounded hover:bg-red-700 uppercase tracking-widest shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.7)] hover:-translate-y-1"
         >
